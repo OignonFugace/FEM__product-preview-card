@@ -24,6 +24,11 @@ This is a solution to the Product Preview Card challenge on [Frontend Mentor](ht
 
 ## My process
 
+### What I learned
+- How to properly use the `<main>` HTML semantic element. I've made the mistake of having two of them in the document. 
+	- [HTML main Tag](https://www.w3schools.com/tags/tag_main.asp)
+	- [Main landmark must not be contained in another landmark | Axe Rules | Deque University | Deque Systems](https://dequeuniversity.com/rules/axe/4.3/landmark-main-is-top-level?application=axeAPI)
+
 ### Questions to community
 I am using the `background-image: url("images/image-product-desktop.jpg");` css property for displaying the image both in desktop and mobile view. Is it considered bad practice since it causes accessibility issues ?
 Thanks for the feedback !
