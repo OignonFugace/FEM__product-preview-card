@@ -28,18 +28,21 @@
        url('./fonts/fraunces-v24-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-
+/* Globals */
 * {
     box-sizing: border-box;
 }
 
 body {
+    display: grid;
+    justify-content: center;
+    align-content: center;
     margin: 0;
+    min-height: 100vh;
     background-color: hsl(30, 38%, 92%);
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     color: hsl(228, 12%, 50%);
-    min-height: 100vh;
 }
 
 a {
@@ -47,30 +50,11 @@ a {
     color: white;
 }
 
-.card {
-    margin: 10rem auto;
-    width: 375px;
-    border-radius: 1rem;
-    background-color: white;
-    overflow: hidden;
-}
-
-.card-image {
-    height: 270px;
-    background-image: url("images/image-product-mobile.jpg");
-    background-size: cover;
-}
-
-.card-content {
-    padding: 2.2rem;
-}
-
 h1 {
     font-family: 'Fraunces', serif;
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 2.4rem;
-    ;
     color: hsl(212, 21%, 14%);
 }
 
@@ -79,14 +63,34 @@ p {
     line-height: 1.5rem;
 }
 
-.caption {
+.upper-title {
     font-size: .95rem;
     text-transform: uppercase;
     letter-spacing: .5rem;
     margin: 0;
 }
 
-.prices {
+
+/* The card */
+.card {
+    width: 375px;
+    margin: 4rem 0;
+    border-radius: 1rem;
+    background-color: white;
+    overflow: hidden;
+}
+
+.card__image {
+    height: 270px;
+    background-image: url("images/image-product-mobile.jpg");
+    background-size: cover;
+}
+
+.card__content {
+    padding: 2.2rem;
+}
+
+.card-content__prices {
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -94,19 +98,20 @@ p {
     margin-bottom: 1.25rem;
 }
 
-.actual-price {
+.prices-item:nth-child(1) {
     display: inline-block;
     font-family: 'Fraunces', serif;
     color: hsl(158, 36%, 37%);
     font-size: 2.5rem;
 }
 
-.price {
+.prices-item:nth-child(2) {
     font-family: 'Montserrat', serif;
     display: inline-block;
     text-decoration: line-through;
 }
 
+/* Buttons */
 .btn {
     border: none;
     display: block;
@@ -124,21 +129,16 @@ p {
     background-color: hsl(158, 36%, 20%);
 }
 
-.icon {
-    margin-right: .5rem;
-    width: 1em;
-    height: 1em;
-}
-
 
 @media only screen and (min-width: 750px) {
     .card {
         display: grid;
         grid-template-columns: 1fr 1fr;
         width: 700px;
+        margin: 0;
     }
 
-    .card-image {
+    .card__image {
         height: initial;
         background-image: url("images/image-product-desktop.jpg");
     }
