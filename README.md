@@ -8,12 +8,8 @@ This is a solution to the Product Preview Card challenge on [Frontend Mentor](ht
 	- [Screenshot](#screenshot)
 	- [Links](#links)
 - [My process](#my-process)
-	- [Built with](#built-with)
-	- [What I learned](#what-i-learned)
-	- [Continued development](#continued-development)
-	- [Useful resources](#useful-resources)
+	- [Questions to community](#questions-to-community)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -23,30 +19,17 @@ This is a solution to the Product Preview Card challenge on [Frontend Mentor](ht
 
 ### Links
 
-- Solution URL: 
-- Live Site URL: 
+- Solution URL: [GitHub - OignonFugace/FEM__product-preview-card](https://github.com/OignonFugace/FEM__product-preview-card)
+- Live Site URL: [Frontend Mentor | Product preview card component](https://oignonfugace.github.io/FEM__product-preview-card/)
 
 ## My process
 
-### Built with
-
-
-### What I learned
-
-
 ### Questions to community
-
-
-### Continued development
-
-
-### Useful resources
-
+I am using the `background-image: url("images/image-product-desktop.jpg");` css property for displaying the image both in desktop and mobile view. Is it considered bad practice since it causes accessibility issues ?
+Thanks for the feedback !
 
 ## Author
 
 - Website - [Oignon Fugace - par Tanguy Freycon](https://oignonfugace.com/)
 - Frontend Mentor - [@OignonFugace](https://www.frontendmentor.io/profile/OignonFugace)
-
-## Acknowledgments
 
