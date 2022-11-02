@@ -41,6 +41,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 14px;
+}
+
 body {
     display: grid;
     justify-content: center;
@@ -48,7 +52,6 @@ body {
     margin: 0;
     min-height: 100vh;
     background-color: var(--color-cream);
-    font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     color: var(--dark-graish-blue);
 }
@@ -58,7 +61,7 @@ a {
     color: white;
 }
 
-h1 {
+h2 {
     font-family: 'Fraunces', serif;
     font-weight: 700;
     font-size: 2.4rem;
@@ -68,7 +71,7 @@ h1 {
 
 p {
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.65rem;
 }
 
 .upper-title {
@@ -78,20 +81,30 @@ p {
     margin: 0;
 }
 
+/* Hiding class, making content visible only to screen readers but not visually */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
 
 /* The card */
 .card {
-    width: 375px;
-    margin: 4rem 0;
+    margin: 4rem 1.5rem;
     border-radius: 1rem;
     background-color: white;
     overflow: hidden;
 }
 
-.card__image {
-    height: 270px;
-    background-image: url("images/image-product-mobile.jpg");
-    background-size: cover;
+.card__image img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .card__content {
@@ -100,6 +113,7 @@ p {
 
 .card-content__prices {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     align-items: center;
     margin-top: 1.5rem;
@@ -116,7 +130,7 @@ p {
 .prices-item:nth-child(2) {
     font-family: 'Montserrat', serif;
     display: inline-block;
-    text-decoration: line-through;
+    font-size: 1rem;
 }
 
 /* Buttons */
@@ -138,16 +152,15 @@ p {
 }
 
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 620px) {
     .card {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        width: 700px;
-        margin: 0;
+        max-width: 630px;
+        margin: 0 1.5rem;
     }
 
-    .card__image {
-        height: initial;
-        background-image: url("images/image-product-desktop.jpg");
+    .card__image img {
+        height: 100%;
     }
 }
