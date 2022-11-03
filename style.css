@@ -95,20 +95,25 @@ p {
 
 /* The card */
 .card {
+    display: flex;
+    flex-direction: column;
     margin: 4rem 1.5rem;
     border-radius: 1rem;
     background-color: white;
     overflow: hidden;
 }
 
+.card > * {
+    flex-basis: 50%;
+}
+
 .card__image img {
     width: 100%;
-    object-fit: cover;
-    display: block;
 }
 
 .card__content {
     padding: 2.2rem;
+    align-self: center;
 }
 
 .card-content__prices {
@@ -155,19 +160,32 @@ p {
 @media only screen and (min-width: 620px) {
     .card {
         display: flex;
+        flex-direction: row;
         max-width: 630px;
         margin: 0 1.5rem;
     }
 
-    .card__image {
+    /* .card__image {
         flex-basis: 50%;
     }
 
     .card__content {
         flex-basis: 50%;
+    } */
+
+    /* .card__image img {
+    height: 100%;
+    } */
+
+    .card__image {
+        position: relative;
+        background-color: var(--dark-cyan);
     }
 
     .card__image img {
+        display: block;
+        position: absolute;
         height: 100%;
+        object-fit: cover;
     }
 }
