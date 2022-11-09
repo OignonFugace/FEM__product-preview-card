@@ -103,10 +103,6 @@ p {
     overflow: hidden;
 }
 
-.card > * {
-    flex-basis: 50%;
-}
-
 .card__image img {
     width: 100%;
 }
@@ -165,26 +161,17 @@ p {
         margin: 0 1.5rem;
     }
 
-    /* .card__image {
+    .card > * {
         flex-basis: 50%;
     }
-
-    .card__content {
-        flex-basis: 50%;
-    } */
-
-    /* .card__image img {
-    height: 100%;
-    } */
 
     .card__image {
         position: relative;
-        background-color: var(--dark-cyan);
     }
 
     .card__image img {
-        display: block;
         position: absolute;
+        display: block;
         height: 100%;
         object-fit: cover;
     }
